@@ -1,0 +1,13 @@
+[Unit]
+Description=Murmur server
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a docker-murmur
+ExecStop=/usr/bin/docker stop -t 2 docker-murmur
+
+[Install]
+WantedBy=local.target
+
