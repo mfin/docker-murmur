@@ -8,3 +8,5 @@ Clone this repo, edit the config file `murmur.ini`, add `fullchain.pem` and `pri
 docker build -t mfin/murmur .
 docker run -d -p 64738:64738 mfin/murmur
 ```
+
+There's also a systemd service file included, `docker-murmur.service`. Copy it to `/etc/systemd/system/`, enable and start, enjoy!
