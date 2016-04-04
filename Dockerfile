@@ -13,7 +13,7 @@ ADD ./murmur.ini /app/murmur.ini
 ADD ./fullchain.pem /app/fullchain.pem
 ADD ./privkey.pem /app/privkey.pem
 
-EXPOSE 64738
+EXPOSE 64738/tcp 64738/udp
 
 ENTRYPOINT ["/app/murmur.x86", "-fg", "-v"]
 CMD ["-ini", "/app/murmur.ini"]
