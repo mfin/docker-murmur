@@ -5,8 +5,8 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker start -a docker-murmur
-ExecStop=/usr/bin/docker stop -t 2 docker-murmur
+ExecStart=/usr/bin/docker start -a murmur-server
+ExecStop=/usr/bin/docker stop -t 2 murmur-server
 
 [Install]
 WantedBy=local.target
