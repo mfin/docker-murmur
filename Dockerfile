@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Matjaž Finžgar <matjaz.finzgar@gmail.com>
 
-ENV version=1.2.16
+ENV version=1.2.18
 
 RUN apk add --update wget tar ca-certificates && rm -rf /var/cache/apk/*
 RUN wget https://github.com/mumble-voip/mumble/releases/download/${version}/murmur-static_x86-${version}.tar.bz2
